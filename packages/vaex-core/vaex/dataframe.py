@@ -6697,7 +6697,6 @@ class DataFrameLocal(DataFrame):
         if 'index' not in kwargs:
             kwargs['index'] = False
 
-
         for i1, i2, chunks in self.evaluate_iterator(expressions, chunk_size=chunk_size, parallel=parallel):
             progressbar( i1 / n_samples)
             chunk_dict = {col: values for col, values in zip(expressions, chunks)}
