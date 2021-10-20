@@ -6686,7 +6686,6 @@ class DataFrameLocal(DataFrame):
         :return:
         """
         import pandas as pd
-        print(kwargs)
         expressions = self.get_column_names()
         progressbar = vaex.utils.progressbars(progress)
         dtypes = self[expressions].dtypes
